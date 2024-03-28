@@ -1,6 +1,7 @@
 black
 coverage
 furo
+hf_transfer
 isort
 jupyterlab
 nb-clean

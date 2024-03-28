@@ -212,7 +212,7 @@ class IRISPipeline(Algorithm):
         Returns:
             Algorithm: instanciated node.
         """
-        if callbacks is not None:
+        if callbacks is not None and len(callbacks):
             instanciated_callbacks = [self.instanciate_class(cb.class_name, cb.params) for cb in callbacks]
             instanciated_callbacks = [cb for cb in instanciated_callbacks if type(cb) not in self.env.disabled_qa]
 
@@ -239,7 +239,6 @@ class IRISPipeline(Algorithm):
 
         if object_class is None:
             raise IRISPipelineError(f"Could not locate class {class_name}")
-
         return object_class(**kwargs)
 
     def _check_pipeline_coherency(self) -> None:
