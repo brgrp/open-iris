@@ -12,3 +12,4 @@ ruff
 sphinx
 twine
 tornado>=6.5 # not directly required, pinned by Snyk to avoid a vulnerability
+urllib3>=2.6.3 # not directly required, pinned by Snyk to avoid a vulnerability
